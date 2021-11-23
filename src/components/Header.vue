@@ -105,9 +105,10 @@ export default {
                 background-color: blue;
             }
             a{
+                text-transform: uppercase;
                 text-decoration: none;
                 color: #000;
-                margin-right: 25px;
+                margin-right: 10px;
                 font-weight: 700;
                 &:hover,
                 &:focus{
