@@ -126,6 +126,60 @@
             </ul>
         </div>
     </div>
+    <div class="icon-ctn">
+        <div class="icon-bar">
+            <ul>
+                <li class="img-ctn">
+                    <img src="../assets/buy-comics-digital-comics.png" alt="">
+                </li>
+                <li>
+                    <a href="#">
+                        Digital Comics
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li class="img-ctn">
+                    <img src="../assets/buy-comics-merchandise.png" alt="">
+                </li>
+                <li>
+                    <a href="#">
+                        Digital Comics
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li class="img-ctn">
+                    <img src="../assets/buy-comics-subscriptions.png" alt="">
+                </li>
+                <li>
+                    <a href="#">
+                        Digital Comics
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li class="img-ctn">
+                    <img src="../assets/buy-comics-shop-locator.png" alt="">
+                </li>
+                <li>
+                    <a href="#">
+                        Digital Comics
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li class="img-ctn">
+                    <img src="../assets/buy-dc-power-visa.svg" alt="">
+                </li>
+               <li>
+                    <a href="#">
+                         Digital Comics
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
   </div>
 </footer>
 </template>
@@ -139,11 +193,12 @@ export default {
 <style lang="scss" scoped>
     .container-footer{
         width: 100%;
+        height: 500px;
         background-image: url(../assets/footer-bg.jpg);
         display: flex;
         position: relative;
         .list-footer{
-            margin-top: 20px;
+            margin-top: 100px;
             margin-bottom: 20px;
             width: 50%;
             height: 30px;
@@ -170,8 +225,9 @@ export default {
         }
         }
         .img-container{
+            margin-top: 50px;
             width: 50%;
-            height: 400px;
+            height: 450px;
             img{
                 width: 100%;
                 height: 100%;
@@ -182,7 +238,7 @@ export default {
         width: 100%;
         background-color: #303030;
         position: absolute;
-        bottom: -25px;
+        bottom: -10px;
         .bar-social{
             width: 80%;
             margin: 0 auto;
@@ -222,6 +278,44 @@ export default {
                         width: 100%;
                         height: 100%;
                         cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+    .icon-ctn{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        background-color: #0282f9;
+        .icon-bar{
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            padding: 20px 0;
+            ul{
+                list-style-type: none;
+                color: #fff;
+                display: flex;
+                align-items: center;
+                a{
+                    text-decoration: none;
+                    color: #fff;
+                      margin-right: 20px;
+                      &:last-child{
+                            margin-right: 0;
+                        }
+                }
+                .img-ctn{
+                    width: 30px;
+                    height: 40px;
+                    margin-right: 10px;
+                    cursor: pointer;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
                     }
                 }
             }

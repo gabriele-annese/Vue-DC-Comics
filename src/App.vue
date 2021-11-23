@@ -5,8 +5,6 @@
     <!-- main -->
     <main>
     <ContentMain />
-    <!-- bonus -->
-
     </main>
 
     <!-- footer -->
