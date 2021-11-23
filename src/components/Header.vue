@@ -1,15 +1,15 @@
 <template>
     <header>
         <nav class="container">
-        <div class="img-ctn">
-            <img src="../assets/dc-logo.png" alt="dc brand">
-        </div>
-        <ul>
-            <li v-for="(link, index) in NavLink" :key="`link-${index}`" >
-                <a href="#">{{link.text}}</a> 
-            </li>
-        </ul>
-    </nav>
+             <div class="img-ctn">
+                <img src="../assets/dc-logo.png" alt="dc brand">
+             </div>
+            <ul>
+                <li v-for="(link, index) in NavLink" :key="`link-${index}`" >
+                    <a href="#">{{link.text}}</a>
+                </li>
+            </ul>
+        </nav>
     </header>
 </template>
 
@@ -85,6 +85,7 @@ export default {
         align-items: center;
         justify-content: space-between;
         padding: 10px 20px;
+        position: relative;
         .img-ctn{
             height: 80px;
             width: 80px;
@@ -102,7 +103,7 @@ export default {
                 text-decoration: none;
                 color: #000;
                 font-size: 14px;
-                margin-right: 10px;
+                margin-right: 15px;
                 font-weight: 700;
                 &:hover,
                 &:focus{

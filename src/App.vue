@@ -3,7 +3,12 @@
     <!-- header -->
     <Header />
     <!-- main -->
+    <main>
     <ContentMain />
+    <!-- bonus -->
+
+    </main>
+
     <!-- footer -->
     <Footer />
   </div>
