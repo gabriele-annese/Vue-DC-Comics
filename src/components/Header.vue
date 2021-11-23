@@ -97,17 +97,11 @@ export default {
             display: inline-block;
             list-style: none;
             display: flex;
-            .active{
-                position: relative;
-                bottom: 0;
-                width: 20px;
-                height: 30px;
-                background-color: blue;
-            }
             a{
                 text-transform: uppercase;
                 text-decoration: none;
                 color: #000;
+                font-size: 14px;
                 margin-right: 10px;
                 font-weight: 700;
                 &:hover,

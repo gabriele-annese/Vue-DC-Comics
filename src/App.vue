@@ -5,18 +5,21 @@
     <!-- main -->
     <ContentMain />
     <!-- footer -->
+    <Footer />
   </div>
 </template>
 
 <script>
 import Header from './components/Header.vue';
 import ContentMain from './components/ContentMain.vue'
+import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
   components: {
     Header,
     ContentMain,
+    Footer,
   }
 }
 </script>
