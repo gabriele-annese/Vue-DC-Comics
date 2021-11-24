@@ -3,20 +3,25 @@
         <div class="container">
             <ul class="list">
                 <li v-for="(el, index) in comics" :key="`el-${index}`">
-                    <div class="img-ctn">
-                        <img :src="el.thumb" :alt="el.type">
-                    </div>
-                    <a href="/">{{el.series}}</a>
+                    <Card :src="el.thumb" :alt="el.type" :title="el.series"/>
                 </li>
             </ul>
+        </div>
+        <div class="footer-main">
+            <button class="series">
+                    Current series
+            </button>
         </div>
     </section>
 </template>
 
 <script>
-// import Card from '@/components/Card.vue'
+import Card from '@/components/Card.vue'
 export default {
     name : 'Hero',
+    components: {
+        Card,
+    },
     data (){
         return {
             comics : [
@@ -113,23 +118,27 @@ export default {
               li{
                   width: calc(100% / 6);
                   padding: 0 10px;
-                  padding-bottom: 20px;
-                  a{
-                    text-decoration: none;
-                    color: #fff;
-                    font-weight: 700;
-                  }
-                  .img-ctn{
-                      width: 100%;
-                      padding-bottom: 20px;
-                      img{
-                          width: 100%;
-                          height: 100%;
-                          object-fit: cover;
-                      }
-                  }
-              }
+                  padding-bottom: 30px;
+                }
           }
       }
+    .footer-main{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 50px;
+        .series{
+              align-self: center;
+                left: 10%;
+                background-color: #0282f9;
+                color: #fff;
+                text-transform: uppercase;
+                font-size: 20px;
+                border: 0;
+                padding: 10px 10px;
+                cursor: pointer;
+          }
+    }
+      
   }
 </style>
