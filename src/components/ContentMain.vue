@@ -1,32 +1,52 @@
 <template>
-  <div class="container">
-      <div class="container-content">
-        <h2>
-            --> Content goes here --
-        </h2>
-      </div>
-  </div>
+<div>
+    <div class="container">
+        <button class="series">
+            Current series
+        </button>
+    </div>
+    <div class="container-content">
+        <div>
+            <Hero />
+        </div>
+    </div>
+</div>
 </template>
 
 <script>
+import Hero from '@/components/Hero.vue'
 export default {
+    name: 'ContentMain',
+    components: {
+        Hero,
+  }
 
 }
 </script>
 
 <style lang="scss" scoped>
     .container{
-        margin-top: 10px;
         width: 100%;
-        height: 100px;
-        background-color:#000 ;
+        height: 400px;
+        background-image: url(../assets/jumbotron.jpg);
+        background-size: cover ;
+        position: relative;
+        width: 100%;
         color: #fff;
+            .series{
+                position: absolute;
+                bottom: -20px;
+                left: 10%;
+                background-color: #0282f9;
+                color: #fff;
+                text-transform: uppercase;
+                font-size: 20px;
+                border: 0;
+                padding: 10px 10px;
+            }
         .container-content{
             width: 80%;
             margin: 0 auto;
-            h2{
-                padding-top: 30px;
-            }
         }
     }
 </style>
