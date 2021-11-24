@@ -6,93 +6,31 @@
             <h4>
                 Dc Comics
             </h4>
-            <li>
-                <a href="#">Characters</a>
+            <li v-for="(elComic, index) in DcComics" :key="`elComic-${index}`">
+                <a href="#">{{elComic.text}}</a>
             </li>
-            <li>
-                <a href="#">Comics</a>
-            </li>
-            <li>
-                <a href="#">Movies</a>
-            </li>
-            <li>
-                <a href="#">Tv</a>
-            </li>
-            <li>
-                <a href="#">Games</a>
-            </li>
-            <li>
-                <a href="#">Videos</a>
-            </li>
-            <li>
-                <a href="#">News</a>
-            </li>
+            
             <h4>
                 Shop
             </h4>
-            <li>
-                <a href="#">Shop Dc</a>
-            </li>
-            <li>
-                <a href="#">Shop Dc Collectibles</a>
+            <li v-for="(elShop, index) in Shop" :key="`elShop-${index}`">
+                <a href="#">{{elShop.text}}</a>
             </li>
         </ul>
         <ul>
             <h4>
                 Dc 
             </h4>
-            <li>
-                <a href="#">Terms Of use</a>
-            </li>
-            <li>
-                <a href="#">Privacy policy (New)</a>
-            </li>
-            <li>
-                <a href="#">Ad Choices</a>
-            </li>
-            <li>
-                <a href="#">Advertising</a>
-            </li>
-            <li>
-                <a href="#">jobs</a>
-            </li>
-            <li>
-                <a href="#">Subscriptions</a>
-            </li>
-            <li>
-                <a href="#">Talent Workshops</a>
-            </li>
-            <li>
-                <a href="#">CPSC Certificates</a>
-            </li>
-            <li>
-                <a href="#">Reatings</a>
-            </li>
-            <li>
-                <a href="#">Shop Help</a>
-            </li>
-            <li>
-                <a href="#">Contact Us</a>
+            <li v-for="(elDc, index) in DcTerms" :key="`elDc-${index}`">
+                <a href="#">{{elDc.text}}</a>
             </li>
         </ul>
         <ul>
             <h4>
                Sites
             </h4>
-            <li>
-                <a href="#">DC</a>
-            </li>
-            <li>
-                <a href="#">MAD Magazine</a>
-            </li>
-            <li>
-                <a href="#">DC kids</a>
-            </li>
-            <li>
-                <a href="#">DC Universe</a>
-            </li>
-            <li>
-                <a href="#">DC Power Vista</a>
+            <li v-for="(elSit, index) in Sites" :key="`elSit-${index}`">
+                <a href="#">{{elSit.text}}</a>
             </li>
         </ul>
       </div>
@@ -144,7 +82,7 @@
                 </li>
                 <li>
                     <a href="#">
-                        Digital Comics
+                        Dc Merchandise
                     </a>
                 </li>
             </ul>
@@ -154,7 +92,7 @@
                 </li>
                 <li>
                     <a href="#">
-                        Digital Comics
+                        Subscription
                     </a>
                 </li>
             </ul>
@@ -164,7 +102,7 @@
                 </li>
                 <li>
                     <a href="#">
-                        Digital Comics
+                        Comic shop locator
                     </a>
                 </li>
             </ul>
@@ -174,7 +112,7 @@
                 </li>
                <li>
                     <a href="#">
-                         Digital Comics
+                         Dc power visa
                     </a>
                 </li>
             </ul>
@@ -186,7 +124,119 @@
 
 <script>
 export default {
-
+     data (){
+        return {
+          DcComics: [
+              {
+                  text: 'Characters',
+                  viibility: true
+              },
+              {
+                  text: 'Comics',
+                  viibility: true
+              },
+              {
+                  text: 'Movies',
+                  viibility: true
+              },
+              {
+                  text: 'TV',
+                  viibility: true
+              },
+              {
+                  text: 'Games',
+                  viibility: true
+              },
+              {
+                  text: 'Videos',
+                  viibility: true
+              },
+              {
+                  text: 'News',
+                  viibility: true
+              },
+          ],
+          Shop: [
+              {
+                  text: 'Shop Dc',
+                  viibility: true
+              },
+              {
+                  text: 'Shop Dc Collectibles',
+                  viibility: true
+              },
+          ],
+          DcTerms:[
+              {
+                  text: 'Terms Of use',
+                  viibility: true
+              },
+              {
+                  text: 'Privacy policy (New)',
+                  viibility: true
+              },
+              {
+                  text: 'Ad Choices',
+                  viibility: true
+              },
+              {
+                  text: 'Advertising',
+                  viibility: true
+              },
+              {
+                  text: 'jobs',
+                  viibility: true
+              },
+              {
+                  text: 'Subscriptions',
+                  viibility: true
+              },
+              {
+                  text: 'Talent Workshops',
+                  viibility: true
+              },
+              {
+                  text: 'CPSC Certificates',
+                  viibility: true
+              },
+              {
+                  text: 'Reatings',
+                  viibility: true
+              },
+              {
+                  text: 'Shop Help',
+                  viibility: true
+              },
+              {
+                  text: 'Contact Us',
+                  viibility: true
+              },
+              
+          ],
+          Sites:[
+              {
+                  text: 'DC',
+                  viibility: true
+              },
+              {
+                  text: 'MAD Magazine',
+                  viibility: true
+              },
+              {
+                  text: 'DC kids',
+                  viibility: true
+              },
+              {
+                  text: 'DC Universe',
+                  viibility: true
+              },
+              {
+                  text: 'DC Power Vista',
+                  viibility: true
+              },
+          ],
+        }
+    }
 }
 </script>
 
@@ -303,13 +353,14 @@ export default {
                     text-decoration: none;
                     color: #fff;
                       margin-right: 20px;
+                      text-transform: uppercase;
                       &:last-child{
                             margin-right: 0;
                         }
                 }
                 .img-ctn{
-                    width: 30px;
-                    height: 40px;
+                    width: 50px;
+                    height: 60px;
                     margin-right: 10px;
                     cursor: pointer;
                     img{

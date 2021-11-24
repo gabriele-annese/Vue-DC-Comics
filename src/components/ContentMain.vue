@@ -43,6 +43,12 @@ export default {
                 font-size: 20px;
                 border: 0;
                 padding: 10px 10px;
+                cursor: pointer;
+                &:hover,
+                &:focus{
+                    background-color: #fff;
+                    color: #0282f9;
+                }
             }
         .container-content{
             width: 80%;
